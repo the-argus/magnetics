@@ -1,4 +1,10 @@
-jquery/*
-bootstrap/*
-pixijs/*
-howlerjs/*
+jquery/
+bootstrap/
+pixijs/
+howlerjs/
+
+# direnv
+.direnv/
+
+# nix
+result

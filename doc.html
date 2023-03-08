@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Magnetics Documentation</title>
+    <!-- easy bootstrap location for when im using live-server -->
+    <!-- <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"> -->
+    <!-- this is the location on the web server -->
+    <link rel="stylesheet" href="/ifm1110/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+      p,
+      li {
+        /* limit line length */
+        max-width: 60rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Project 3 - Magnetics - Documentation</h1>
+      <h4>Ian McFarlane</h4>
+      <a href="./index.html"><h3>Return to Project</h3></a>
+      <a href="../11_18_22_project3_proposal/index.html"><h3>Return to Proposal</h3></a>
+    </header>
+    <hr />
+    <main>
+      <h2>My Process</h2>
+      <p>
+        I started with the proposals, which you can find at
+        <a
+          href="https://people.rit.edu/ifm1110/235/git/projects/11_18_22_project3_proposal_OLD/"
+          >https://people.rit.edu/ifm1110/235/git/projects/11_18_22_project3_proposal_OLD/</a
+        >
+        and
+        <a
+          href="https://people.rit.edu/ifm1110/235/git/projects/11_18_22_project3_proposal"
+          >https://people.rit.edu/ifm1110/235/git/projects/11_18_22_project3_proposal/</a
+        >
+      </p>
+      <p>
+        I began the project by spawning a PIXI sprite and making it move
+        downwards all the time. Then I wrote an AABB overlap function. Then I
+        instantiated a floor sprite and began watching the talk listed in my
+        sources. After applying what I learned, I had a system which could
+        handle vertical, downwards collisions (so walls and ceilings didn't
+        work) and was extremely bouncy. I clearly had messed something up, but I
+        decided to put it off since it was somewhat servicable. I implemented
+        the magnets, at this point fully subscribing to an entity component
+        system architechture. I managed to write an algorithm for getting
+        normals, too, so collisions with walls and ceilings could now occur.
+      </p>
+      <p>
+        At this point I submitted to the feedback party. There was no reset
+        button, and the incessant bouncing was a big issue. I proceeded to spend
+        most of my time post-feedback on getting the physics right, which turned
+        out to be easy by applying the theory I knew, instead of trying to copy
+        and paste the equations on Catto's slides that I didn't fully
+        understand.
+      </p>
+      <p>
+        Finally, I spent the last few days before submission adding the goal,
+        fancy graphical filters, cleaning up the code, and adding more
+        documentation. As a finishing touch, I made magnets pulse when active.
+      </p>
+      <h2>Sources</h2>
+      <ul>
+        <li>
+          <a
+            href="https://www.gdcvault.com/play/1020603/Physics-for-Game-Programmers-Understanding"
+            >Physics for Game Programmers: Understanding Constraints
+          </a>
+          - A talk from the creator of Box2D, Erin Catto himself.
+        </li>
+      </ul>
+      <h2>How I Met The Requirements</h2>
+      <ul>
+        <li>
+          <strong>Code Formatting:</strong> Code is formatted according to
+          <a href="https://standardjs.com/index.html">standardjs</a> with eslint
+          used as the actual formatter. Additionally, every file contains at
+          least some commenting.
+        </li>
+        <li>
+          <strong>ES6 Class: </strong> All of the files in the "objects" folder
+          contain classes (children of GameObject) built using an entity
+          component system.
+        </li>
+        <li>
+          <strong>Documentation: </strong> hmmmm not sure if I did this one or
+          not just not sure hmmmmm
+        </li>
+        <li>
+          <strong>Error Prevention: </strong> I don't have a single try/catch in
+          my code. However, I challenge you to get it to throw an error! It's
+          pretty well tested, as far as four or five people playing it for a few
+          minutes in front of me can.
+        </li>
+        <li>
+          <strong>Optimized Images: </strong> My images aren't particularly
+          optimized: they're png format (could easily be jpeg) and 1024x1024
+          (could probably be smaller without sacrificing much visual quality.
+          However, there are a grand total of three (3) images, so it's not
+          exactly negatively affecting the experience.
+        </li>
+      </ul>
+
+      <h2>Features You Should Notice</h2>
+      <ul>
+        <li>The player has reduced movement control while in the air.</li>
+        <li>Friction is different while in the air and on the ground.</li>
+        <li>When you land on the ground, you don't go through it.</li>
+        <li>Seriously, that last one is difficult to do accurately</li>
+      </ul>
+    </main>
+  </body>
+</html>

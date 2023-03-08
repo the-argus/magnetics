@@ -1,0 +1,17 @@
+body {
+  background-color: black;
+}
+
+* {
+  font-family: monospace;
+  color: white;
+}
+
+button {
+  color: black;
+}
+
+main {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}

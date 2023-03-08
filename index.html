@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>magnetics</title>
+
+    <!-- easy bootstrap location for when im using live-server -->
+    <!-- <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"> -->
+    <!-- this is the location on the web server -->
+    <link rel="stylesheet" href="/ifm1110/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+  </head>
+  <body>
+    <div id="app-view"></div>
+    <main>
+      <h1>Instructions</h1>
+      <p>A and D to move, W to jump.</p>
+      <p>Press and hold the letters on the magnets to activate them.</p>
+      <p>Reach the triangle to progress to the next level.</p>
+      <div id="volume-info">
+        <h2>Audio Status</h2>
+        <span>Currently: <span id="audio-status">Muted</span></span>
+        <button id="mute" class="btn btn-primary">PRESS TO UNMUTE</button>
+      </div>
+      <p>
+        <a href="./doc.html"><h3>Documentation</h3></a>
+      </p>
+    </main>
+    <script src="/jquery/jquery.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+    <script src="/pixijs/pixi.js"></script>
+    <script src="/pixijs/pixi-filters.js"></script>
+    <script src="/howlerjs/dist/howler.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

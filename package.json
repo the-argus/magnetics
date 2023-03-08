@@ -1,0 +1,13 @@
+{
+  "standard": {
+    "globals": [
+      "PIXI",
+      "Howl",
+      "localStorage",
+      "XMLHttpRequest"
+    ]
+  },
+  "dependencies": {
+    "pixi.js": "^6.5.8"
+  }
+}

@@ -90,14 +90,12 @@ export class PhysicsEngine {
 
       // if collided, add an impulse to correct the collision
       if (collisionInfo.collided) {
+        staticBody.collisionHandler(staticBody, body)
+        body.collisionHandler(body, staticBody)
         if (staticBody.collisionMask & body.collisionMask) {
-        // trigger collision but dont resolve it
-          staticBody.collisionHandler(staticBody, body)
-          body.collisionHandler(body, staticBody)
+          // trigger collision but dont resolve it
           continue
         }
-        staticBody.collisionHandler()
-        body.collisionHandler()
         body.lastCollisionInfo = collisionInfo
         // this is colliding, now calculate constraints as if the body is a point
         // first, we know the corrective impulse will be applied along the normal
